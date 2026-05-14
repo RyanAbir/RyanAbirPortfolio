@@ -1,4 +1,10 @@
-export const projects = [
+export type Project = {
+  title: string;
+  description: string;
+  stack: string[];
+};
+
+export const projects: Project[] = [
   {
     title: "AI SaaS Dashboard",
     description:
