@@ -1,13 +1,9 @@
 import About from "../components/About";
 import Hero from "../components/Hero";
+import Projects from "../components/Projects";
 import Skills from "../components/Skills";
 
 const placeholderSections = [
-  {
-    id: "projects",
-    title: "Projects",
-    description: "Selected SaaS, AI, MERN, and Flutter work placeholder.",
-  },
   {
     id: "services",
     title: "Services",
@@ -26,6 +22,7 @@ export default function Home() {
       <Hero />
       <About />
       <Skills />
+      <Projects />
 
       <div className="grid gap-5 pb-20 md:grid-cols-2">
         {placeholderSections.map((section) => (
