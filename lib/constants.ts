@@ -7,6 +7,7 @@ export const SITE_DESCRIPTION =
   "Full Stack MERN and Flutter Developer building SaaS-ready web apps, mobile apps, dashboards, and AI-powered applications.";
 
 export const SITE_URL = "https://ryanabir.dev";
+export const RESUME_URL = "/resume/Ryan_Abir_Modern_Resume.pdf";
 
 export const SITE_KEYWORDS = [
   "Ryan Abir",

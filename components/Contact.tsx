@@ -1,8 +1,10 @@
+import { RESUME_URL } from "../lib/constants";
+
 type ContactMethod = {
   label: string;
   value: string;
   href: string;
-  isExternal?: boolean;
+  openInNewTab?: boolean;
 };
 
 const email = "info.ryanabir@gmail.com";
@@ -17,24 +19,25 @@ const contactMethods: ContactMethod[] = [
     label: "GitHub",
     value: "View profile",
     href: "https://github.com/RyanAbir",
-    isExternal: true,
+    openInNewTab: true,
   },
   {
     label: "LinkedIn",
     value: "Connect professionally",
     href: "https://www.linkedin.com/in/ryanabir/",
-    isExternal: true,
+    openInNewTab: true,
   },
   {
     label: "WhatsApp",
     value: "Message directly",
     href: "https://wa.me/8801715682373",
-    isExternal: true,
+    openInNewTab: true,
   },
   {
     label: "Resume",
     value: "View resume",
-    href: "#",
+    href: RESUME_URL,
+    openInNewTab: true,
   },
 ];
 
@@ -80,7 +83,9 @@ export default function Contact() {
             <a
               aria-label="View Ryan Abir resume"
               className="inline-flex items-center justify-center rounded-md border border-white/10 bg-white/[0.04] px-5 py-3 text-sm font-semibold text-white transition hover:border-cyan-300/40 hover:bg-white/[0.07]"
-              href="#"
+              href={RESUME_URL}
+              rel="noopener noreferrer"
+              target="_blank"
             >
               View Resume
             </a>
@@ -93,8 +98,8 @@ export default function Contact() {
                 className="rounded-lg border border-white/10 bg-slate-950/60 p-4 transition hover:border-cyan-300/30 hover:bg-white/[0.04]"
                 href={method.href}
                 key={method.label}
-                rel={method.isExternal ? "noopener noreferrer" : undefined}
-                target={method.isExternal ? "_blank" : undefined}
+                rel={method.openInNewTab ? "noopener noreferrer" : undefined}
+                target={method.openInNewTab ? "_blank" : undefined}
               >
                 <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">
                   {method.label}
