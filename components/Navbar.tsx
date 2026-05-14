@@ -31,7 +31,7 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            className="rounded-md border border-cyan-300/30 bg-cyan-300/10 px-4 py-2 font-medium text-cyan-100 transition hover:border-cyan-200/60 hover:bg-cyan-300/15"
+            className="btn-primary px-4 py-2"
             href="#contact"
           >
             Contact

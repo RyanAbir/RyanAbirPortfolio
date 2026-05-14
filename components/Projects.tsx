@@ -52,7 +52,7 @@ function ProjectCard({ project }: { project: Project }) {
       <div className="mt-auto flex flex-col gap-3 pt-8 sm:flex-row">
         <a
           aria-label={`View live demo for ${project.title}`}
-          className="inline-flex items-center justify-center rounded-md bg-cyan-300 px-4 py-2.5 text-sm font-semibold text-slate-950 transition hover:bg-cyan-200"
+          className="btn-primary px-4 py-2.5"
           href={project.links.liveDemo}
         >
           Live Demo

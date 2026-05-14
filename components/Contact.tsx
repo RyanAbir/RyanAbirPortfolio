@@ -63,7 +63,7 @@ export default function Contact() {
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <a
               aria-label="Email Ryan Abir"
-              className="inline-flex items-center justify-center rounded-md bg-cyan-300 px-5 py-3 text-sm font-semibold text-slate-950 shadow-lg shadow-cyan-950/30 transition hover:bg-cyan-200"
+              className="btn-primary px-5 py-3 shadow-lg shadow-cyan-950/30"
               href={`mailto:${email}`}
             >
               Email Me
