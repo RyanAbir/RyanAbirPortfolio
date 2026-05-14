@@ -1,13 +1,23 @@
+"use client";
+
+import { useState } from "react";
 import { NAV_LINKS, SITE_NAME } from "../lib/constants";
 
 export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <header className="border-b border-white/10">
-      <nav className="mx-auto flex h-20 w-full max-w-6xl items-center justify-between px-6 sm:px-8 lg:px-10">
-        <a className="text-lg font-semibold tracking-tight text-white" href="/">
+    <header className="sticky top-0 z-50 border-b border-white/10 bg-slate-950/72 backdrop-blur-xl">
+      <nav className="page-shell flex min-h-20 items-center justify-between">
+        <a
+          className="text-lg font-semibold tracking-tight text-white"
+          href="/"
+          onClick={() => setIsOpen(false)}
+        >
           {SITE_NAME}
         </a>
-        <div className="hidden items-center gap-6 text-sm text-slate-300 sm:flex">
+
+        <div className="hidden items-center gap-6 text-sm text-slate-300 md:flex">
           {NAV_LINKS.map((link) => (
             <a
               className="transition hover:text-white"
@@ -17,8 +27,45 @@ export default function Navbar() {
               {link.label}
             </a>
           ))}
+          <a
+            className="rounded-md border border-cyan-300/30 bg-cyan-300/10 px-4 py-2 font-medium text-cyan-100 transition hover:border-cyan-200/60 hover:bg-cyan-300/15"
+            href="#contact"
+          >
+            Contact
+          </a>
         </div>
+
+        <button
+          aria-expanded={isOpen}
+          aria-label="Toggle navigation menu"
+          className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-white/10 bg-white/[0.04] text-slate-200 md:hidden"
+          onClick={() => setIsOpen((current) => !current)}
+          type="button"
+        >
+          <span className="flex flex-col gap-1.5">
+            <span className="block h-0.5 w-4 rounded-full bg-current" />
+            <span className="block h-0.5 w-4 rounded-full bg-current" />
+            <span className="block h-0.5 w-4 rounded-full bg-current" />
+          </span>
+        </button>
       </nav>
+
+      {isOpen ? (
+        <div className="page-shell pb-4 md:hidden">
+          <div className="glass-panel grid gap-1 rounded-lg p-2">
+            {NAV_LINKS.map((link) => (
+              <a
+                className="rounded-md px-3 py-3 text-sm text-slate-300 transition hover:bg-white/[0.04] hover:text-white"
+                href={link.href}
+                key={link.href}
+                onClick={() => setIsOpen(false)}
+              >
+                {link.label}
+              </a>
+            ))}
+          </div>
+        </div>
+      ) : null}
     </header>
   );
 }

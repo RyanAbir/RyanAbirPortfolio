@@ -28,10 +28,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <div className="min-h-screen bg-slate-950 text-slate-100">
+      <body className={`${inter.className} bg-slate-950 text-slate-100`}>
+        <div className="flex min-h-screen flex-col overflow-hidden">
           <Navbar />
-          <main>{children}</main>
+          <main className="flex-1">{children}</main>
           <Footer />
         </div>
       </body>

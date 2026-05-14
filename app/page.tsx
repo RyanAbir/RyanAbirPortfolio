@@ -1,37 +1,74 @@
 import { SITE_FOCUS, SITE_NAME, SITE_ROLE } from "../lib/constants";
 
-const futureSections = ["About", "Skills", "Projects", "Services", "Contact"];
+const placeholderSections = [
+  {
+    id: "about",
+    title: "About",
+    description: "Founder story, background, and working philosophy placeholder.",
+  },
+  {
+    id: "skills",
+    title: "Skills",
+    description: "Technical stack and engineering strengths placeholder.",
+  },
+  {
+    id: "projects",
+    title: "Projects",
+    description: "Selected SaaS, AI, MERN, and Flutter work placeholder.",
+  },
+  {
+    id: "services",
+    title: "Services",
+    description: "Product engineering and development services placeholder.",
+  },
+  {
+    id: "contact",
+    title: "Contact",
+    description: "Availability, email, and collaboration details placeholder.",
+  },
+] as const;
 
 export default function Home() {
   return (
-    <section className="mx-auto flex min-h-[calc(100vh-9rem)] w-full max-w-6xl flex-col justify-center px-6 py-20 sm:px-8 lg:px-10">
-      <div className="max-w-3xl">
-        <p className="mb-4 text-sm font-semibold uppercase tracking-[0.28em] text-cyan-300">
-          {SITE_FOCUS}
-        </p>
-        <h1 className="text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-6xl">
-          {SITE_NAME}
-        </h1>
-        <p className="mt-5 text-xl leading-8 text-slate-300">{SITE_ROLE}</p>
-        <p className="mt-6 max-w-2xl text-base leading-7 text-slate-400">
-          Hero placeholder for a modern, minimal developer portfolio. Full
-          sections will be added in the next build phase.
-        </p>
-      </div>
+    <div className="page-shell">
+      <section
+        className="section-shell flex min-h-[calc(100vh-5rem)] items-center"
+        id="hero"
+      >
+        <div className="max-w-3xl">
+          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.28em] text-cyan-300">
+            {SITE_FOCUS}
+          </p>
+          <h1 className="text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-6xl">
+            {SITE_NAME}
+          </h1>
+          <p className="mt-5 text-xl leading-8 text-slate-300">{SITE_ROLE}</p>
+          <p className="mt-6 max-w-2xl text-base leading-7 text-slate-400">
+            Hero placeholder for a modern, minimal developer portfolio. Full
+            sections will be added in the next build phase.
+          </p>
+        </div>
+      </section>
 
-      <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
-        {futureSections.map((section) => (
-          <div
-            className="rounded-lg border border-white/10 bg-white/[0.03] p-5"
-            key={section}
+      <div className="grid gap-5 pb-20 md:grid-cols-2">
+        {placeholderSections.map((section) => (
+          <section
+            className="section-shell glass-panel rounded-lg p-6"
+            id={section.id}
+            key={section.id}
           >
-            <p className="text-sm font-medium text-slate-300">{section}</p>
-            <p className="mt-2 text-xs uppercase tracking-[0.18em] text-slate-500">
+            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-cyan-300">
               Coming soon
             </p>
-          </div>
+            <h2 className="mt-3 text-2xl font-semibold tracking-tight text-white">
+              {section.title}
+            </h2>
+            <p className="mt-3 text-sm leading-6 text-slate-400">
+              {section.description}
+            </p>
+          </section>
         ))}
       </div>
-    </section>
+    </div>
   );
 }
