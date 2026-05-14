@@ -49,14 +49,16 @@ function ProjectCard({ project }: { project: Project }) {
         </ul>
       </div>
 
-      <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+      <div className="mt-auto flex flex-col gap-3 pt-8 sm:flex-row">
         <a
+          aria-label={`View live demo for ${project.title}`}
           className="inline-flex items-center justify-center rounded-md bg-cyan-300 px-4 py-2.5 text-sm font-semibold text-slate-950 transition hover:bg-cyan-200"
           href={project.links.liveDemo}
         >
           Live Demo
         </a>
         <a
+          aria-label={`View GitHub repository for ${project.title}`}
           className="inline-flex items-center justify-center rounded-md border border-white/10 bg-white/[0.04] px-4 py-2.5 text-sm font-semibold text-white transition hover:border-cyan-300/40 hover:bg-white/[0.07]"
           href={project.links.github}
         >

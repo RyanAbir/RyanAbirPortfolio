@@ -79,7 +79,7 @@ export default function Hero() {
               MERN • Flutter • SaaS • AI
             </p>
           </div>
-          <div className="mt-5 flex items-center justify-between rounded-lg border border-emerald-300/20 bg-emerald-300/10 p-5">
+          <div className="mt-5 flex flex-wrap items-center justify-between gap-3 rounded-lg border border-emerald-300/20 bg-emerald-300/10 p-5">
             <span className="text-sm text-slate-300">Status</span>
             <span className="text-sm font-semibold text-emerald-200">
               Open to opportunities

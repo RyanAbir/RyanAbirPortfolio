@@ -4,7 +4,22 @@ export const SITE_FOCUS = "SaaS & AI-powered applications";
 
 export const SITE_TITLE = `${SITE_NAME} | ${SITE_ROLE}`;
 export const SITE_DESCRIPTION =
-  "Modern developer portfolio for Ryan Abir, a Full Stack MERN and Flutter Developer focused on SaaS and AI-powered applications.";
+  "Full Stack MERN and Flutter Developer building SaaS-ready web apps, mobile apps, dashboards, and AI-powered applications.";
+
+export const SITE_URL = "https://ryanabir.dev";
+
+export const SITE_KEYWORDS = [
+  "Ryan Abir",
+  "Full Stack Developer",
+  "MERN Stack",
+  "Flutter Developer",
+  "React",
+  "Node.js",
+  "MongoDB",
+  "Firebase",
+  "SaaS",
+  "AI Integration",
+] as const;
 
 export const NAV_LINKS = [
   { label: "About", href: "#about" },

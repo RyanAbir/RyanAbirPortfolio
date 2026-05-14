@@ -21,6 +21,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
   background: var(--background);
 }
 
@@ -43,6 +44,17 @@ a {
   text-decoration: none;
 }
 
+a,
+button {
+  outline-offset: 4px;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid rgba(103, 232, 249, 0.9);
+  outline-offset: 4px;
+}
+
 button,
 input,
 textarea,
@@ -57,7 +69,7 @@ select {
 
 .section-shell {
   scroll-margin-top: 6rem;
-  padding-block: 5rem;
+  padding-block: clamp(4rem, 7vw, 5.5rem);
 }
 
 .glass-panel {

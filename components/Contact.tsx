@@ -62,12 +62,14 @@ export default function Contact() {
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <a
+              aria-label="Email Ryan Abir"
               className="inline-flex items-center justify-center rounded-md bg-cyan-300 px-5 py-3 text-sm font-semibold text-slate-950 shadow-lg shadow-cyan-950/30 transition hover:bg-cyan-200"
               href={`mailto:${email}`}
             >
               Email Me
             </a>
             <a
+              aria-label="View Ryan Abir resume"
               className="inline-flex items-center justify-center rounded-md border border-white/10 bg-white/[0.04] px-5 py-3 text-sm font-semibold text-white transition hover:border-cyan-300/40 hover:bg-white/[0.07]"
               href="#"
             >
@@ -78,6 +80,7 @@ export default function Contact() {
           <div className="mt-10 grid gap-3 sm:grid-cols-2">
             {contactMethods.map((method) => (
               <a
+                aria-label={`${method.label}: ${method.value}`}
                 className="rounded-lg border border-white/10 bg-slate-950/60 p-4 transition hover:border-cyan-300/30 hover:bg-white/[0.04]"
                 href={method.href}
                 key={method.label}

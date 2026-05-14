@@ -1,7 +1,10 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 import { NAV_LINKS, SITE_NAME } from "../lib/constants";
+
+const desktopNavLinks = NAV_LINKS.filter((link) => link.href !== "#contact");
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,16 +12,16 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-slate-950/72 backdrop-blur-xl">
       <nav className="page-shell flex min-h-20 items-center justify-between">
-        <a
+        <Link
           className="text-lg font-semibold tracking-tight text-white"
           href="/"
           onClick={() => setIsOpen(false)}
         >
           {SITE_NAME}
-        </a>
+        </Link>
 
         <div className="hidden items-center gap-6 text-sm text-slate-300 md:flex">
-          {NAV_LINKS.map((link) => (
+          {desktopNavLinks.map((link) => (
             <a
               className="transition hover:text-white"
               href={link.href}
@@ -36,8 +39,9 @@ export default function Navbar() {
         </div>
 
         <button
+          aria-controls="mobile-navigation"
           aria-expanded={isOpen}
-          aria-label="Toggle navigation menu"
+          aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
           className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-white/10 bg-white/[0.04] text-slate-200 md:hidden"
           onClick={() => setIsOpen((current) => !current)}
           type="button"
@@ -52,7 +56,10 @@ export default function Navbar() {
 
       {isOpen ? (
         <div className="page-shell pb-4 md:hidden">
-          <div className="glass-panel grid gap-1 rounded-lg p-2">
+          <div
+            className="glass-panel grid gap-1 rounded-lg p-2"
+            id="mobile-navigation"
+          >
             {NAV_LINKS.map((link) => (
               <a
                 className="rounded-md px-3 py-3 text-sm text-slate-300 transition hover:bg-white/[0.04] hover:text-white"
