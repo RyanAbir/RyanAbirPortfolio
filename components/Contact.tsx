@@ -2,6 +2,7 @@ type ContactMethod = {
   label: string;
   value: string;
   href: string;
+  isExternal?: boolean;
 };
 
 const email = "info.ryanabir@gmail.com";
@@ -15,12 +16,20 @@ const contactMethods: ContactMethod[] = [
   {
     label: "GitHub",
     value: "View profile",
-    href: "#",
+    href: "https://github.com/RyanAbir",
+    isExternal: true,
   },
   {
     label: "LinkedIn",
     value: "Connect professionally",
-    href: "#",
+    href: "https://www.linkedin.com/in/ryanabir/",
+    isExternal: true,
+  },
+  {
+    label: "WhatsApp",
+    value: "Message directly",
+    href: "https://wa.me/8801715682373",
+    isExternal: true,
   },
   {
     label: "Resume",
@@ -84,6 +93,8 @@ export default function Contact() {
                 className="rounded-lg border border-white/10 bg-slate-950/60 p-4 transition hover:border-cyan-300/30 hover:bg-white/[0.04]"
                 href={method.href}
                 key={method.label}
+                rel={method.isExternal ? "noopener noreferrer" : undefined}
+                target={method.isExternal ? "_blank" : undefined}
               >
                 <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">
                   {method.label}
