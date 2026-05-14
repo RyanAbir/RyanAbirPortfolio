@@ -1,16 +1,8 @@
+import About from "../components/About";
 import Hero from "../components/Hero";
+import Skills from "../components/Skills";
 
 const placeholderSections = [
-  {
-    id: "about",
-    title: "About",
-    description: "Founder story, background, and working philosophy placeholder.",
-  },
-  {
-    id: "skills",
-    title: "Skills",
-    description: "Technical stack and engineering strengths placeholder.",
-  },
   {
     id: "projects",
     title: "Projects",
@@ -32,6 +24,8 @@ export default function Home() {
   return (
     <div className="page-shell">
       <Hero />
+      <About />
+      <Skills />
 
       <div className="grid gap-5 pb-20 md:grid-cols-2">
         {placeholderSections.map((section) => (

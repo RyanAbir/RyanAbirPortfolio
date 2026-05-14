@@ -1,17 +1,32 @@
-export type Skill = {
-  name: string;
-  category: "Frontend" | "Backend" | "Mobile" | "AI" | "Architecture";
+export type SkillGroup = {
+  category: "Frontend" | "Backend" | "Mobile" | "Tools" | "Focus";
+  skills: string[];
 };
 
-export const skills: Skill[] = [
-  { name: "React", category: "Frontend" },
-  { name: "Next.js", category: "Frontend" },
-  { name: "Node.js", category: "Backend" },
-  { name: "Express", category: "Backend" },
-  { name: "MongoDB", category: "Backend" },
-  { name: "Flutter", category: "Mobile" },
-  { name: "Dart", category: "Mobile" },
-  { name: "Tailwind CSS", category: "Frontend" },
-  { name: "AI Integrations", category: "AI" },
-  { name: "SaaS Architecture", category: "Architecture" },
+export const skillGroups: SkillGroup[] = [
+  {
+    category: "Frontend",
+    skills: ["React.js", "Next.js", "TypeScript", "Tailwind CSS", "JavaScript"],
+  },
+  {
+    category: "Backend",
+    skills: ["Node.js", "Express.js", "MongoDB", "REST APIs", "Authentication"],
+  },
+  {
+    category: "Mobile",
+    skills: ["Flutter", "Dart", "Firebase", "Firestore"],
+  },
+  {
+    category: "Tools",
+    skills: ["Git", "GitHub", "Vercel", "Postman"],
+  },
+  {
+    category: "Focus",
+    skills: [
+      "SaaS Applications",
+      "AI Integration",
+      "Stripe Payments",
+      "Clean Architecture",
+    ],
+  },
 ];
