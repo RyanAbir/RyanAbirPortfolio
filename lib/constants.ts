@@ -8,6 +8,7 @@ export const SITE_DESCRIPTION =
 
 export const SITE_URL = "https://www.ryanabir.space";
 export const RESUME_URL = "/resume/Ryan_Abir_Modern_Resume.pdf";
+export const ATS_RESUME_URL = "/resume/Ryan_Abir_ATS_Resume.pdf";
 
 export const SITE_KEYWORDS = [
   "Ryan Abir",

@@ -1,4 +1,4 @@
-import { RESUME_URL } from "../lib/constants";
+import { ATS_RESUME_URL, RESUME_URL } from "../lib/constants";
 
 type ContactMethod = {
   label: string;
@@ -34,9 +34,15 @@ const contactMethods: ContactMethod[] = [
     openInNewTab: true,
   },
   {
-    label: "Resume",
-    value: "View resume",
+    label: "Modern Resume",
+    value: "View modern resume",
     href: RESUME_URL,
+    openInNewTab: true,
+  },
+  {
+    label: "ATS Resume",
+    value: "View ATS resume",
+    href: ATS_RESUME_URL,
     openInNewTab: true,
   },
 ];
@@ -81,13 +87,22 @@ export default function Contact() {
               Email Me
             </a>
             <a
-              aria-label="View Ryan Abir resume"
+              aria-label="View Ryan Abir modern resume"
               className="inline-flex items-center justify-center rounded-md border border-white/10 bg-white/[0.04] px-5 py-3 text-sm font-semibold text-white transition hover:border-cyan-300/40 hover:bg-white/[0.07]"
               href={RESUME_URL}
               rel="noopener noreferrer"
               target="_blank"
             >
-              View Resume
+              View Modern Resume
+            </a>
+            <a
+              aria-label="View Ryan Abir ATS resume"
+              className="inline-flex items-center justify-center rounded-md border border-white/10 px-4 py-2.5 text-sm font-medium text-slate-300 transition hover:border-cyan-300/40 hover:bg-white/[0.04] hover:text-white"
+              href={ATS_RESUME_URL}
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              View ATS Resume
             </a>
           </div>
 
