@@ -1,14 +1,10 @@
 import About from "../components/About";
 import Hero from "../components/Hero";
 import Projects from "../components/Projects";
+import Services from "../components/Services";
 import Skills from "../components/Skills";
 
 const placeholderSections = [
-  {
-    id: "services",
-    title: "Services",
-    description: "Product engineering and development services placeholder.",
-  },
   {
     id: "contact",
     title: "Contact",
@@ -23,6 +19,7 @@ export default function Home() {
       <About />
       <Skills />
       <Projects />
+      <Services />
 
       <div className="grid gap-5 pb-20 md:grid-cols-2">
         {placeholderSections.map((section) => (
