@@ -127,8 +127,8 @@ export default function Contact() {
           </div>
         </div>
 
-        <aside className="glass-panel rounded-lg p-6 sm:p-7 lg:mt-9">
-          <div className="flex items-start justify-between gap-4">
+        <aside className="grid gap-3 lg:mt-9">
+          <div className="glass-panel flex items-start justify-between gap-4 rounded-lg p-4 sm:p-5">
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">
                 Availability
@@ -140,21 +140,19 @@ export default function Contact() {
             <span className="mt-1 h-3 w-3 shrink-0 rounded-full bg-emerald-400 shadow-[0_0_24px_rgba(52,211,153,0.8)]" />
           </div>
 
-          <div className="mt-6 grid gap-4">
-            {availabilityDetails.map((detail) => (
-              <div
-                className="rounded-lg border border-white/10 bg-slate-950/60 p-4 sm:p-5"
-                key={detail.label}
-              >
-                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">
-                  {detail.label}
-                </p>
-                <p className="mt-2 text-sm leading-6 text-slate-200">
-                  {detail.value}
-                </p>
-              </div>
-            ))}
-          </div>
+          {availabilityDetails.map((detail) => (
+            <div
+              className="glass-panel rounded-lg p-4 sm:p-5"
+              key={detail.label}
+            >
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">
+                {detail.label}
+              </p>
+              <p className="mt-2 text-sm font-medium leading-6 text-slate-200">
+                {detail.value}
+              </p>
+            </div>
+          ))}
         </aside>
       </div>
     </section>
