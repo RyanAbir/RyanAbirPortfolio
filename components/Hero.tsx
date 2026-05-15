@@ -17,8 +17,8 @@ export default function Hero() {
       id="hero"
     >
       <div className="absolute left-1/2 top-16 -z-10 h-72 w-72 -translate-x-1/2 rounded-full bg-cyan-400/10 blur-3xl" />
-      <div className="grid w-full items-center gap-12 py-8 lg:grid-cols-[1.08fr_0.92fr]">
-        <div>
+      <div className="grid w-full items-center gap-8 py-8 sm:gap-12 lg:grid-cols-[1.08fr_0.92fr]">
+        <div className="order-2 lg:order-1">
           <div className="inline-flex rounded-full border border-cyan-300/20 bg-cyan-300/10 px-4 py-2 text-sm font-medium text-cyan-100">
             Available for freelance, remote roles & startup collaborations
           </div>
@@ -38,13 +38,13 @@ export default function Hero() {
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <a
-              className="btn-primary px-5 py-3 shadow-lg shadow-cyan-950/30"
+              className="btn-primary w-full px-5 py-3 shadow-lg shadow-cyan-950/30 sm:w-auto"
               href="#projects"
             >
               View Projects
             </a>
             <a
-              className="inline-flex items-center justify-center rounded-md border border-white/10 bg-white/[0.04] px-5 py-3 text-sm font-semibold text-white transition hover:border-cyan-300/40 hover:bg-white/[0.07]"
+              className="inline-flex w-full items-center justify-center rounded-md border border-white/10 bg-white/[0.04] px-5 py-3 text-sm font-semibold text-white transition hover:border-cyan-300/40 hover:bg-white/[0.07] sm:w-auto"
               href="#contact"
             >
               Contact Me
@@ -63,7 +63,7 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="glass-panel relative rounded-lg p-6 sm:p-8">
+        <div className="glass-panel order-1 relative rounded-lg p-6 sm:p-8 lg:order-2">
           <div className="absolute right-6 top-6 h-3 w-3 rounded-full bg-emerald-400 shadow-[0_0_24px_rgba(52,211,153,0.8)]" />
           <p className="text-sm font-medium uppercase tracking-[0.22em] text-slate-500">
             Developer Profile
@@ -71,11 +71,11 @@ export default function Hero() {
           <div className="mt-10 flex flex-col gap-6 sm:flex-row sm:items-center">
             <Image
               alt="Ryan Abir - Full Stack MERN and Flutter Developer"
-              className="h-32 w-32 rounded-full border border-cyan-200/20 object-cover shadow-[0_0_36px_rgba(34,211,238,0.22)] sm:h-36 sm:w-36"
-              height={144}
+              className="h-40 w-40 rounded-full border border-cyan-200/25 object-cover shadow-[0_0_42px_rgba(34,211,238,0.24)] sm:h-36 sm:w-36"
+              height={160}
               priority
               src="/images/ryan-abir.jpg"
-              width={144}
+              width={160}
             />
             <div>
               <h2 className="text-3xl font-semibold tracking-tight text-white">

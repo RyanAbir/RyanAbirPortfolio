@@ -14,20 +14,20 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 border-b border-white/10 bg-slate-950/72 backdrop-blur-xl">
       <nav className="page-shell flex min-h-20 items-center justify-between">
         <Link
-          aria-label="Go to Ryan Abir homepage"
-          className="inline-flex items-center gap-3 text-lg font-semibold tracking-tight text-white"
+          aria-label="Go to homepage"
+          className="inline-flex items-center gap-2.5 text-lg font-semibold tracking-tight text-white sm:gap-3"
           href="/"
           onClick={() => setIsOpen(false)}
         >
           <Image
             alt="Ryan Abir Logo"
-            className="h-10 w-10 rounded-md border border-white/10 object-contain shadow-[0_0_24px_rgba(34,211,238,0.18)]"
-            height={40}
+            className="h-10 w-auto object-contain drop-shadow-[0_0_14px_rgba(34,211,238,0.16)] sm:h-11"
+            height={44}
             priority
             src="/logo/logo.png"
-            width={40}
+            width={26}
           />
-          <span>{SITE_NAME}</span>
+          <span className="hidden min-[360px]:inline">{SITE_NAME}</span>
         </Link>
 
         <div className="hidden items-center gap-6 text-sm text-slate-300 md:flex">
