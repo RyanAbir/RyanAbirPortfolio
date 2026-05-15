@@ -78,31 +78,33 @@ export default function Contact() {
             and SaaS/AI-powered product opportunities.
           </p>
 
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
-            <a
-              aria-label="Email Ryan Abir"
-              className="btn-primary px-5 py-3 shadow-lg shadow-cyan-950/30 sm:min-w-32"
-              href={`mailto:${email}`}
-            >
-              Email Me
-            </a>
-            <a
-              aria-label="View Ryan Abir modern resume"
-              className="inline-flex items-center justify-center rounded-md border border-white/10 bg-white/[0.04] px-5 py-3 text-sm font-semibold text-white transition hover:border-cyan-300/40 hover:bg-white/[0.07]"
-              href={RESUME_URL}
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              View Modern Resume
-            </a>
+          <div className="mt-8 flex flex-col items-start gap-3">
+            <div className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row sm:flex-wrap sm:items-center">
+              <a
+                aria-label="Email Ryan Abir"
+                className="btn-primary px-5 py-3 shadow-lg shadow-cyan-950/30 sm:min-w-32"
+                href={`mailto:${email}`}
+              >
+                Email Me
+              </a>
+              <a
+                aria-label="View Ryan Abir resume"
+                className="inline-flex items-center justify-center rounded-md border border-white/10 bg-white/[0.04] px-5 py-3 text-sm font-semibold text-white transition hover:border-cyan-300/40 hover:bg-white/[0.07]"
+                href={RESUME_URL}
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                View Resume
+              </a>
+            </div>
             <a
               aria-label="View Ryan Abir ATS resume"
-              className="inline-flex items-center justify-center rounded-md border border-white/10 px-5 py-3 text-sm font-medium text-slate-300 transition hover:border-cyan-300/40 hover:bg-white/[0.04] hover:text-white"
+              className="text-sm font-medium text-slate-500 transition hover:text-cyan-200"
               href={ATS_RESUME_URL}
               rel="noopener noreferrer"
               target="_blank"
             >
-              View ATS Resume
+              ATS Resume
             </a>
           </div>
 
