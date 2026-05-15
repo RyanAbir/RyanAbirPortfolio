@@ -21,11 +21,11 @@ export default function Navbar() {
         >
           <Image
             alt="Ryan Abir Logo"
-            className="h-10 w-10 rounded-md border border-white/10 object-contain shadow-[0_0_24px_rgba(34,211,238,0.18)]"
+            className="h-10 w-auto object-contain"
             height={40}
             priority
             src="/logo/logo.png"
-            width={40}
+            width={64}
           />
           <span>{SITE_NAME}</span>
         </Link>
