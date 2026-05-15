@@ -2,16 +2,71 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { NAV_LINKS, SITE_NAME } from "../lib/constants";
 
 const desktopNavLinks = NAV_LINKS.filter((link) => link.href !== "#contact");
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const hideTimerRef = useRef<number | null>(null);
+
+  useEffect(() => {
+    const clearHideTimer = () => {
+      if (hideTimerRef.current) {
+        window.clearTimeout(hideTimerRef.current);
+        hideTimerRef.current = null;
+      }
+    };
+
+    const scheduleHide = () => {
+      clearHideTimer();
+
+      if (window.scrollY < 100 || isOpen) {
+        return;
+      }
+
+      hideTimerRef.current = window.setTimeout(() => {
+        if (window.scrollY >= 100 && !isOpen) {
+          setIsVisible(false);
+        }
+      }, 5000);
+    };
+
+    const handleScroll = () => {
+      setIsVisible(true);
+
+      if (window.scrollY < 100) {
+        clearHideTimer();
+        return;
+      }
+
+      scheduleHide();
+    };
+
+    if (isOpen || window.scrollY < 100) {
+      clearHideTimer();
+    } else {
+      scheduleHide();
+    }
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => {
+      clearHideTimer();
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [isOpen]);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/10 bg-slate-950/72 backdrop-blur-xl">
+    <header
+      className={`sticky top-0 z-50 border-b border-white/10 bg-slate-950/72 backdrop-blur-xl transition duration-300 ease-out ${
+        isVisible
+          ? "translate-y-0 opacity-100"
+          : "pointer-events-none -translate-y-4 opacity-0"
+      }`}
+    >
       <nav className="page-shell flex min-h-20 items-center justify-between">
         <Link
           aria-label="Go to homepage"
@@ -53,7 +108,10 @@ export default function Navbar() {
           aria-expanded={isOpen}
           aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
           className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-white/10 bg-white/[0.04] text-slate-200 md:hidden"
-          onClick={() => setIsOpen((current) => !current)}
+          onClick={() => {
+            setIsVisible(true);
+            setIsOpen((current) => !current);
+          }}
           type="button"
         >
           <span className="flex flex-col gap-1.5">
@@ -75,7 +133,10 @@ export default function Navbar() {
                 className="rounded-md px-3 py-3 text-sm text-slate-300 transition hover:bg-white/[0.04] hover:text-white"
                 href={link.href}
                 key={link.href}
-                onClick={() => setIsOpen(false)}
+                onClick={() => {
+                  setIsVisible(true);
+                  setIsOpen(false);
+                }}
               >
                 {link.label}
               </a>
