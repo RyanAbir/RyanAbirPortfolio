@@ -53,8 +53,8 @@ const availabilityDetails = [
 export default function Contact() {
   return (
     <section className="section-shell pb-20" id="contact">
-      <div className="grid gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-start lg:gap-10">
-        <div className="max-w-3xl">
+      <div className="grid gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-stretch lg:gap-10">
+        <div className="max-w-3xl lg:h-full">
           <p className="text-xs font-semibold uppercase tracking-[0.22em] text-cyan-300">
             Contact
           </p>
@@ -117,7 +117,7 @@ export default function Contact() {
           </div>
         </div>
 
-        <aside className="grid gap-3 lg:mt-9">
+        <aside className="grid gap-3 lg:mt-9 lg:h-[calc(100%-2.25rem)] lg:self-stretch lg:content-between">
           <div className="glass-panel flex items-start justify-between gap-4 rounded-lg p-4 sm:p-5">
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">
