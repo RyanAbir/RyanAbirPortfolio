@@ -33,18 +33,6 @@ const contactMethods: ContactMethod[] = [
     href: "https://wa.me/8801715682373",
     openInNewTab: true,
   },
-  {
-    label: "Modern Resume",
-    value: "View modern resume",
-    href: RESUME_URL,
-    openInNewTab: true,
-  },
-  {
-    label: "ATS Resume",
-    value: "View ATS resume",
-    href: ATS_RESUME_URL,
-    openInNewTab: true,
-  },
 ];
 
 const availabilityDetails = [
@@ -108,7 +96,7 @@ export default function Contact() {
             </a>
           </div>
 
-          <div className="mt-9 grid gap-3 sm:grid-cols-2">
+          <div className="mt-8 grid gap-3 sm:grid-cols-2">
             {contactMethods.map((method) => (
               <a
                 aria-label={`${method.label}: ${method.value}`}
