@@ -65,8 +65,8 @@ const availabilityDetails = [
 export default function Contact() {
   return (
     <section className="section-shell pb-20" id="contact">
-      <div className="grid gap-8 lg:grid-cols-[1.08fr_0.92fr] lg:items-start">
-        <div>
+      <div className="grid gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-start lg:gap-10">
+        <div className="max-w-3xl">
           <p className="text-xs font-semibold uppercase tracking-[0.22em] text-cyan-300">
             Contact
           </p>
@@ -78,10 +78,10 @@ export default function Contact() {
             and SaaS/AI-powered product opportunities.
           </p>
 
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
             <a
               aria-label="Email Ryan Abir"
-              className="btn-primary px-5 py-3 shadow-lg shadow-cyan-950/30"
+              className="btn-primary px-5 py-3 shadow-lg shadow-cyan-950/30 sm:min-w-32"
               href={`mailto:${email}`}
             >
               Email Me
@@ -97,7 +97,7 @@ export default function Contact() {
             </a>
             <a
               aria-label="View Ryan Abir ATS resume"
-              className="inline-flex items-center justify-center rounded-md border border-white/10 px-4 py-2.5 text-sm font-medium text-slate-300 transition hover:border-cyan-300/40 hover:bg-white/[0.04] hover:text-white"
+              className="inline-flex items-center justify-center rounded-md border border-white/10 px-5 py-3 text-sm font-medium text-slate-300 transition hover:border-cyan-300/40 hover:bg-white/[0.04] hover:text-white"
               href={ATS_RESUME_URL}
               rel="noopener noreferrer"
               target="_blank"
@@ -106,11 +106,11 @@ export default function Contact() {
             </a>
           </div>
 
-          <div className="mt-10 grid gap-3 sm:grid-cols-2">
+          <div className="mt-9 grid gap-3 sm:grid-cols-2">
             {contactMethods.map((method) => (
               <a
                 aria-label={`${method.label}: ${method.value}`}
-                className="rounded-lg border border-white/10 bg-slate-950/60 p-4 transition hover:border-cyan-300/30 hover:bg-white/[0.04]"
+                className="flex min-h-28 flex-col justify-between rounded-lg border border-white/10 bg-slate-950/60 p-4 transition hover:border-cyan-300/30 hover:bg-white/[0.04]"
                 href={method.href}
                 key={method.label}
                 rel={method.openInNewTab ? "noopener noreferrer" : undefined}
@@ -119,7 +119,7 @@ export default function Contact() {
                 <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">
                   {method.label}
                 </p>
-                <p className="mt-2 text-sm font-medium text-slate-200">
+                <p className="mt-3 break-words text-sm font-medium leading-6 text-slate-200">
                   {method.value}
                 </p>
               </a>
@@ -127,18 +127,23 @@ export default function Contact() {
           </div>
         </div>
 
-        <aside className="glass-panel rounded-lg p-6 sm:p-8">
-          <div className="flex items-center gap-3">
-            <span className="h-3 w-3 rounded-full bg-emerald-400 shadow-[0_0_24px_rgba(52,211,153,0.8)]" />
-            <p className="text-sm font-semibold text-emerald-200">
-              Open to opportunities
-            </p>
+        <aside className="glass-panel rounded-lg p-6 sm:p-7 lg:mt-9">
+          <div className="flex items-start justify-between gap-4">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">
+                Availability
+              </p>
+              <p className="mt-2 text-sm font-semibold text-emerald-200">
+                Open to opportunities
+              </p>
+            </div>
+            <span className="mt-1 h-3 w-3 shrink-0 rounded-full bg-emerald-400 shadow-[0_0_24px_rgba(52,211,153,0.8)]" />
           </div>
 
-          <div className="mt-8 space-y-5">
+          <div className="mt-6 grid gap-4">
             {availabilityDetails.map((detail) => (
               <div
-                className="rounded-lg border border-white/10 bg-slate-950/60 p-5"
+                className="rounded-lg border border-white/10 bg-slate-950/60 p-4 sm:p-5"
                 key={detail.label}
               >
                 <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">
