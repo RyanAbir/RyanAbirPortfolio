@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { SITE_NAME, SITE_ROLE } from "../lib/constants";
 
 const techHighlights = [
@@ -67,11 +68,23 @@ export default function Hero() {
           <p className="text-sm font-medium uppercase tracking-[0.22em] text-slate-500">
             Developer Profile
           </p>
-          <div className="mt-10">
-            <h2 className="text-3xl font-semibold tracking-tight text-white">
-              {SITE_NAME}
-            </h2>
-            <p className="mt-3 text-lg text-slate-300">Full Stack Developer</p>
+          <div className="mt-10 flex flex-col gap-6 sm:flex-row sm:items-center">
+            <Image
+              alt="Ryan Abir - Full Stack MERN and Flutter Developer"
+              className="h-32 w-32 rounded-full border border-cyan-200/20 object-cover shadow-[0_0_36px_rgba(34,211,238,0.22)] sm:h-36 sm:w-36"
+              height={144}
+              priority
+              src="/images/ryan-abir.jpg"
+              width={144}
+            />
+            <div>
+              <h2 className="text-3xl font-semibold tracking-tight text-white">
+                {SITE_NAME}
+              </h2>
+              <p className="mt-3 text-lg text-slate-300">
+                Full Stack Developer
+              </p>
+            </div>
           </div>
           <div className="mt-8 rounded-lg border border-white/10 bg-slate-950/70 p-5">
             <p className="text-sm text-slate-400">Specialized in</p>

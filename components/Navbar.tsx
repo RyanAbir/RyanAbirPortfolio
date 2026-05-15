@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { NAV_LINKS, SITE_NAME } from "../lib/constants";
@@ -13,11 +14,20 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 border-b border-white/10 bg-slate-950/72 backdrop-blur-xl">
       <nav className="page-shell flex min-h-20 items-center justify-between">
         <Link
-          className="text-lg font-semibold tracking-tight text-white"
+          aria-label="Go to Ryan Abir homepage"
+          className="inline-flex items-center gap-3 text-lg font-semibold tracking-tight text-white"
           href="/"
           onClick={() => setIsOpen(false)}
         >
-          {SITE_NAME}
+          <Image
+            alt="Ryan Abir Logo"
+            className="h-10 w-10 rounded-md border border-white/10 object-contain shadow-[0_0_24px_rgba(34,211,238,0.18)]"
+            height={40}
+            priority
+            src="/logo/logo.png"
+            width={40}
+          />
+          <span>{SITE_NAME}</span>
         </Link>
 
         <div className="hidden items-center gap-6 text-sm text-slate-300 md:flex">
