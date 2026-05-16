@@ -3,6 +3,7 @@ import { projects, type Project, type ProjectStatus } from "../data/projects";
 const statusStyles: Record<ProjectStatus, string> = {
   Completed: "border-emerald-300/20 bg-emerald-300/10 text-emerald-200",
   "In Progress": "border-amber-300/20 bg-amber-300/10 text-amber-200",
+  Featured: "border-purple-300/20 bg-purple-300/10 text-purple-200",
 };
 
 function ProjectCard({ project }: { project: Project }) {
@@ -77,11 +78,10 @@ export default function Projects() {
           Projects
         </p>
         <h2 className="mt-3 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
-          Selected builds across MERN, Flutter, SaaS, and AI.
+          Selected SaaS, AI, MERN & Flutter Projects.
         </h2>
         <p className="mt-4 text-base leading-7 text-slate-400">
-          A focused set of portfolio projects showing secure product flows,
-          mobile-first execution, and SaaS-ready AI concepts.
+          A focused portfolio of production-style applications featuring SaaS dashboards, secure authentication, Firebase backends, and applied AI integrations.
         </p>
       </div>
 
