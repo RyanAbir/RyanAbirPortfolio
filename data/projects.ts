@@ -55,22 +55,4 @@ export const projects: Project[] = [
       github: "https://github.com/RyanAbir/securenotes-app",
     },
   },
-  {
-    title: "Personal Finance Management App",
-    type: "Flutter + Firebase App",
-    status: "Completed",
-    description:
-      "A cross-platform mobile application for tracking personal expenses, providing intuitive dashboard analytics, and seamless data synchronization via Firebase.",
-    tech: ["Flutter", "Dart", "Firebase", "Firestore"],
-    highlights: [
-      "Expense tracking",
-      "Dashboard analytics",
-      "Cloud sync",
-      "Cross-platform mobile support",
-    ],
-    links: {
-      liveDemo: "#",
-      github: "#",
-    },
-  },
 ];
