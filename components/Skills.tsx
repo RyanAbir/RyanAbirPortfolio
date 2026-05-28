@@ -8,11 +8,11 @@ export default function Skills() {
           Skills
         </p>
         <h2 className="mt-3 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
-          A focused stack for shipping complete digital products.
+          A focused stack for building SaaS, AI-powered, and full-stack web apps.
         </h2>
         <p className="mt-4 text-base leading-7 text-slate-400">
-          Grouped capabilities across frontend, backend, mobile development,
-          delivery tools, and product-focused engineering.
+          Grouped capabilities across frontend, backend, databases, billing,
+          authentication, deployment, and product-focused engineering.
         </p>
       </div>
 
