@@ -1,4 +1,4 @@
-export type ProjectStatus = "Completed" | "In Progress" | "Featured";
+export type ProjectStatus = "Completed" | "In Progress" | "Featured" | "Live";
 
 export type Project = {
   title: string;
@@ -14,6 +14,39 @@ export type Project = {
 };
 
 export const projects: Project[] = [
+  {
+    title: "SaaS Billing Starter",
+    type: "SaaS Billing System",
+    status: "Live",
+    description:
+      "Production-style subscription billing starter built with Next.js App Router, Clerk, Stripe Billing, Prisma, Neon PostgreSQL, and Vercel. It demonstrates a complete SaaS billing lifecycle including authentication, checkout, webhook-based subscription sync, billing portal management, scheduled cancellation handling, duplicate subscription prevention, and server-side plan-based feature gating.",
+    tech: [
+      "Next.js",
+      "TypeScript",
+      "Stripe Billing",
+      "Clerk",
+      "Prisma",
+      "Neon",
+      "PostgreSQL",
+      "Tailwind CSS",
+      "Vercel",
+      "Webhooks",
+    ],
+    highlights: [
+      "Stripe Checkout subscription flow",
+      "Webhook-based subscription status sync",
+      "Stripe Customer Portal billing management",
+      "Scheduled cancellation state handling",
+      "Duplicate subscription prevention",
+      "Free vs Pro server-side feature gating",
+      "Prisma + Neon PostgreSQL persistence",
+      "Live Vercel deployment",
+    ],
+    links: {
+      liveDemo: "https://saas-billing-starter-one.vercel.app",
+      github: "https://github.com/RyanAbir/saas-billing-starter",
+    },
+  },
   {
     title: "Family Finance Management",
     type: "SaaS + AI Dashboard",
