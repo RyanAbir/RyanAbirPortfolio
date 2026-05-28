@@ -1,12 +1,12 @@
 export type SkillGroup = {
   category:
     | "Frontend"
-    | "Backend"
-    | "Database & ORM"
+    | "Backend & APIs"
+    | "Database & Cloud"
     | "SaaS & Payments"
-    | "Auth & Security"
+    | "AI & Product Engineering"
     | "Tools & Deployment"
-    | "Focus";
+    ;
   skills: string[];
 };
 
@@ -23,7 +23,7 @@ export const skillGroups: SkillGroup[] = [
     ],
   },
   {
-    category: "Backend",
+    category: "Backend & APIs",
     skills: [
       "Node.js",
       "Express.js",
@@ -34,43 +34,33 @@ export const skillGroups: SkillGroup[] = [
     ],
   },
   {
-    category: "Database & ORM",
+    category: "Database & Cloud",
     skills: ["PostgreSQL", "Neon", "Prisma", "MongoDB", "Firebase", "Firestore"],
   },
   {
     category: "SaaS & Payments",
     skills: [
-      "Stripe Checkout",
       "Stripe Billing",
-      "Stripe Webhooks",
+      "Stripe Checkout",
+      "Webhooks",
       "Customer Portal",
-      "Subscription Management",
+      "Subscription Logic",
       "Plan-Based Gating",
     ],
   },
   {
-    category: "Auth & Security",
+    category: "AI & Product Engineering",
     skills: [
-      "Clerk",
-      "JWT Auth",
-      "Firebase Auth",
-      "Protected Routes",
-      "Environment Variables",
+      "Gemini AI",
+      "AI Dashboards",
+      "SaaS Applications",
+      "Clean Architecture",
+      "Technical Assessments",
+      "Product Workflows",
     ],
   },
   {
     category: "Tools & Deployment",
     skills: ["Git", "GitHub", "Vercel", "Postman", "npm", "pnpm"],
-  },
-  {
-    category: "Focus",
-    skills: [
-      "SaaS Applications",
-      "AI-Powered Apps",
-      "Billing Systems",
-      "Clean Architecture",
-      "Technical Assessment Workflow",
-      "Production-Ready Apps",
-    ],
   },
 ];

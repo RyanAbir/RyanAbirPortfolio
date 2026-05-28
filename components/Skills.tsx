@@ -11,8 +11,7 @@ export default function Skills() {
           A focused stack for building SaaS, AI-powered, and full-stack web apps.
         </h2>
         <p className="mt-4 text-base leading-7 text-slate-400">
-          Grouped capabilities across frontend, backend, databases, billing,
-          authentication, deployment, and product-focused engineering.
+          Grouped capabilities across frontend, backend, databases, SaaS billing, AI integrations, and deployment workflows.
         </p>
       </div>
 
