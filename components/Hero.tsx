@@ -1,13 +1,13 @@
-import Image from "next/image";
+﻿import Image from "next/image";
 import { SITE_NAME, SITE_ROLE } from "../lib/constants";
 
 const techHighlights = [
-  "React",
-  "Node.js",
-  "MongoDB",
-  "Flutter",
-  "Firebase",
-  "AI Integration",
+  "Next.js App Router",
+  "TypeScript",
+  "Supabase/Firebase",
+  "AI APIs",
+  "SaaS Dashboards",
+  "Business Logic",
 ] as const;
 
 export default function Hero() {
@@ -32,8 +32,10 @@ export default function Hero() {
           </h1>
 
           <p className="mt-6 max-w-2xl text-base leading-7 text-slate-300 sm:text-lg sm:leading-8">
-            I build modern web and mobile applications using React, Node.js,
-            MongoDB, Flutter, Firebase, and AI integrations.
+            I build production-ready web applications using Next.js,
+            TypeScript, Supabase/Firebase, and AI APIs. My focus is creating
+            practical SaaS products with authentication, dashboards, databases,
+            AI-powered workflows, and real-world business logic.
           </p>
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -70,7 +72,7 @@ export default function Hero() {
           </p>
           <div className="mt-10 flex flex-col gap-6 sm:flex-row sm:items-center">
             <Image
-              alt="Ryan Abir - Full Stack MERN and Flutter Developer"
+              alt="Ryan Abir - Full-Stack AI SaaS Developer"
               className="h-40 w-40 rounded-full border border-cyan-200/25 object-cover shadow-[0_0_42px_rgba(34,211,238,0.24)] sm:h-36 sm:w-36"
               height={160}
               priority
@@ -82,14 +84,14 @@ export default function Hero() {
                 {SITE_NAME}
               </h2>
               <p className="mt-3 text-lg text-slate-300">
-                Full Stack Developer
+                Full-Stack AI SaaS Developer
               </p>
             </div>
           </div>
           <div className="mt-8 rounded-lg border border-white/10 bg-slate-950/70 p-5">
             <p className="text-sm text-slate-400">Specialized in</p>
             <p className="mt-3 text-xl font-semibold text-white">
-              MERN • Flutter • SaaS • AI
+              Next.js | TypeScript | SaaS | AI
             </p>
           </div>
           <div className="mt-5 flex flex-wrap items-center justify-between gap-3 rounded-lg border border-emerald-300/20 bg-emerald-300/10 p-5">

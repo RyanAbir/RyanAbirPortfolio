@@ -15,6 +15,33 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    title: "JobFit Copilot",
+    type: "AI SaaS / Full-Stack Web App",
+    status: "Featured",
+    description:
+      "JobFit Copilot is an AI-powered job application assistant for developers. Users can paste a job post or job link, compare it with their saved developer profile, generate a fit score, identify matched and missing skills, detect weak areas and red flags, suggest resume keywords, create a tailored application email, and track applications in a dashboard.",
+    tech: [
+      "Next.js",
+      "TypeScript",
+      "Supabase Auth",
+      "Supabase Database",
+      "Gemini API",
+      "Tailwind CSS",
+      "Vercel",
+    ],
+    highlights: [
+      "Built an AI-powered job application assistant that analyzes job posts and compares them with a developer profile.",
+      "Integrated Gemini API to generate fit scores, matched skills, missing skills, red flags, resume keywords, and tailored application emails.",
+      "Implemented authentication, database storage, application tracking, and dashboard metrics using Supabase.",
+      "Designed a complete SaaS-style product flow from user profile setup to AI analysis and saved job tracking.",
+      "Created structured AI output handling to make generated insights usable inside the product UI.",
+    ],
+    links: {
+      liveDemo: "https://github.com/RyanAbir/jobfit-copilot",
+      github: "https://github.com/RyanAbir/jobfit-copilot",
+    },
+  },
+  {
     title: "SaaS Billing Starter",
     type: "SaaS Billing System",
     status: "Live",

@@ -1,10 +1,10 @@
 const strengths = [
-  "Full stack web apps",
-  "Cross-platform mobile apps",
+  "Full-stack SaaS products",
+  "AI-integrated workflows",
   "Authentication systems",
-  "Dashboards and admin panels",
-  "SaaS-ready applications",
-  "AI-integrated features",
+  "Dashboards and analytics",
+  "Database-backed architecture",
+  "Product-focused execution",
 ] as const;
 
 export default function About() {
@@ -16,15 +16,19 @@ export default function About() {
             About
           </p>
           <h2 className="mt-3 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
-            Building practical products for web, mobile, SaaS, and AI.
+            Building practical SaaS products with AI integrations.
           </h2>
         </div>
 
         <div className="glass-panel rounded-lg p-6 sm:p-8">
           <p className="text-base leading-8 text-slate-300">
-            Ryan Abir is a Full Stack MERN & Flutter Developer focused on
-            building scalable web and mobile applications, SaaS-ready products,
-            dashboards, authentication systems, and AI-integrated features.
+            Ryan Abir is a Full-Stack AI SaaS Developer focused on building
+            practical SaaS-style products with authentication, dashboards,
+            database-backed workflows, and applied AI integrations. Recent work
+            includes JobFit Copilot, an AI-powered job application assistant
+            that combines authentication, database storage, AI analysis,
+            dashboard metrics, and application tracking in one full-stack
+            product.
           </p>
 
           <div className="mt-8 grid gap-3 sm:grid-cols-2">

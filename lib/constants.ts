@@ -1,10 +1,10 @@
 export const SITE_NAME = "Ryan Abir";
-export const SITE_ROLE = "Full Stack MERN & Flutter Developer";
-export const SITE_FOCUS = "SaaS & AI-powered applications";
+export const SITE_ROLE = "Full-Stack AI SaaS Developer";
+export const SITE_FOCUS = "Production-ready SaaS & AI-powered applications";
 
 export const SITE_TITLE = `${SITE_NAME} | ${SITE_ROLE}`;
 export const SITE_DESCRIPTION =
-  "Full Stack MERN and Flutter Developer building SaaS-ready web apps, mobile apps, dashboards, and AI-powered applications.";
+  "Full-Stack AI SaaS Developer building production-ready web applications with authentication, dashboards, databases, and AI-powered workflows.";
 
 export const SITE_URL = "https://www.ryanabir.space";
 export const RESUME_URL = "/resume/Ryan_Abir_Resume.pdf";
@@ -12,15 +12,13 @@ export const ATS_RESUME_URL = "/resume/Ryan_Abir_Resume.pdf";
 
 export const SITE_KEYWORDS = [
   "Ryan Abir",
-  "Full Stack Developer",
-  "MERN Stack",
-  "Flutter Developer",
-  "React",
-  "Node.js",
-  "MongoDB",
+  "Full-Stack AI SaaS Developer",
+  "Next.js",
+  "TypeScript",
+  "Supabase",
   "Firebase",
   "SaaS",
-  "AI Integration",
+  "AI API Integration",
 ] as const;
 
 export const NAV_LINKS = [
