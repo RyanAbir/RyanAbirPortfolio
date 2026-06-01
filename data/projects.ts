@@ -37,7 +37,7 @@ export const projects: Project[] = [
       "Created structured AI output handling to make generated insights usable inside the product UI.",
     ],
     links: {
-      liveDemo: "https://github.com/RyanAbir/jobfit-copilot",
+      liveDemo: "https://jobfit-copilot-sigma.vercel.app",
       github: "https://github.com/RyanAbir/jobfit-copilot",
     },
   },
