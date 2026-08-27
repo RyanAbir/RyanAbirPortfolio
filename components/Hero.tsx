@@ -1,106 +1,60 @@
-﻿import Image from "next/image";
-import { SITE_NAME, SITE_ROLE } from "../lib/constants";
+import Logo from "./Logo";
+import { SITE_NAME } from "../lib/constants";
 
-const techHighlights = [
-  "Next.js App Router",
-  "TypeScript",
-  "Supabase/Firebase",
-  "AI APIs",
-  "SaaS Dashboards",
-  "Business Logic",
-] as const;
+const specs: { term: string; value: React.ReactNode }[] = [
+  { term: "Role", value: "Full-Stack Engineer" },
+  { term: "Languages", value: "TypeScript · Python" },
+  { term: "Backend", value: "Node · FastAPI · Django" },
+  { term: "Focus", value: "CRM · ERP · SaaS" },
+  { term: "Shipped", value: "4 live products" },
+  { term: "Status", value: <span className="ok">● Available</span> },
+];
 
 export default function Hero() {
   return (
-    <section
-      className="section-shell relative flex min-h-[calc(100vh-5rem)] items-center overflow-hidden"
-      id="hero"
-    >
-      <div className="absolute left-1/2 top-16 -z-10 h-72 w-72 -translate-x-1/2 rounded-full bg-cyan-400/10 blur-3xl" />
-      <div className="grid w-full items-center gap-8 py-8 sm:gap-12 lg:grid-cols-[1.08fr_0.92fr]">
-        <div className="order-2 lg:order-1">
-          <div className="inline-flex rounded-full border border-cyan-300/20 bg-cyan-300/10 px-4 py-2 text-sm font-medium text-cyan-100">
-            Available for freelance, remote roles & startup collaborations
-          </div>
-
-          <p className="mt-8 text-sm font-semibold uppercase tracking-[0.28em] text-cyan-300">
-            Building SaaS & AI-Powered Applications
-          </p>
-
-          <h1 className="mt-5 max-w-4xl text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-6xl">
-            {SITE_ROLE}
+    <section className="hero" id="top">
+      <div className="hero-glow" />
+      <div className="wrap">
+        <div>
+          <span className="eyebrow reveal">
+            <span className="n">01</span> Full-Stack Software Engineer — Dhaka, BD
+          </span>
+          <h1 className="reveal">
+            I build the software a business <span className="hl">runs on.</span>
           </h1>
-
-          <p className="mt-6 max-w-2xl text-base leading-7 text-slate-300 sm:text-lg sm:leading-8">
-            I build production-ready web applications using Next.js,
-            TypeScript, Supabase/Firebase, and AI APIs. My focus is creating
-            practical SaaS products with authentication, dashboards, databases,
-            AI-powered workflows, and real-world business logic.
+          <p className="lede reveal">
+            Scalable CRM, ERP, and SaaS platforms and workflow-driven apps —
+            engineered full-stack, delivered fast with AI-assisted development,
+            grounded in fundamentals.
           </p>
-
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <a
-              className="btn-primary w-full px-5 py-3 shadow-lg shadow-cyan-950/30 sm:w-auto"
-              href="#projects"
-            >
-              View Projects
+          <div className="hero-cta reveal">
+            <a className="btn btn-solid" href="#work">
+              View selected work
             </a>
-            <a
-              className="inline-flex w-full items-center justify-center rounded-md border border-white/10 bg-white/[0.04] px-5 py-3 text-sm font-semibold text-white transition hover:border-cyan-300/40 hover:bg-white/[0.07] sm:w-auto"
-              href="#contact"
-            >
-              Contact Me
+            <a className="btn btn-ghost" href="#contact">
+              Get in touch
             </a>
           </div>
+          <div className="status reveal">
+            <span className="dot" /> Open to freelance, remote roles &amp;
+            startup collaborations
+          </div>
+        </div>
 
-          <div className="mt-8 flex flex-wrap gap-3">
-            {techHighlights.map((tech) => (
-              <span
-                className="rounded-md border border-white/10 bg-slate-900/70 px-3 py-2 text-sm text-slate-300"
-                key={tech}
-              >
-                {tech}
-              </span>
+        <aside className="spec reveal" aria-label={`${SITE_NAME} profile summary`}>
+          <div className="mk">
+            <Logo />
+            <span className="tag">// profile</span>
+          </div>
+          <dl>
+            {specs.map((spec) => (
+              <div className="row" key={spec.term}>
+                <dt>{spec.term}</dt>
+                <dd>{spec.value}</dd>
+              </div>
             ))}
-          </div>
-        </div>
-
-        <div className="glass-panel order-1 relative rounded-lg p-6 sm:p-8 lg:order-2">
-          <div className="absolute right-6 top-6 h-3 w-3 rounded-full bg-emerald-400 shadow-[0_0_24px_rgba(52,211,153,0.8)]" />
-          <p className="text-sm font-medium uppercase tracking-[0.22em] text-slate-500">
-            Developer Profile
-          </p>
-          <div className="mt-10 flex flex-col gap-6 sm:flex-row sm:items-center">
-            <Image
-              alt="Ryan Abir - Full-Stack AI SaaS Developer"
-              className="h-40 w-40 rounded-full border border-cyan-200/25 object-cover shadow-[0_0_42px_rgba(34,211,238,0.24)] sm:h-36 sm:w-36"
-              height={160}
-              priority
-              src="/images/ryan-abir.jpg"
-              width={160}
-            />
-            <div>
-              <h2 className="text-3xl font-semibold tracking-tight text-white">
-                {SITE_NAME}
-              </h2>
-              <p className="mt-3 text-lg text-slate-300">
-                Full-Stack AI SaaS Developer
-              </p>
-            </div>
-          </div>
-          <div className="mt-8 rounded-lg border border-white/10 bg-slate-950/70 p-5">
-            <p className="text-sm text-slate-400">Specialized in</p>
-            <p className="mt-3 text-xl font-semibold text-white">
-              Next.js | TypeScript | SaaS | AI
-            </p>
-          </div>
-          <div className="mt-5 flex flex-wrap items-center justify-between gap-3 rounded-lg border border-emerald-300/20 bg-emerald-300/10 p-5">
-            <span className="text-sm text-slate-300">Status</span>
-            <span className="text-sm font-semibold text-emerald-200">
-              Open to opportunities
-            </span>
-          </div>
-        </div>
+          </dl>
+        </aside>
       </div>
     </section>
   );

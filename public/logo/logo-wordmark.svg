@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 160" width="620" height="160">
+  <g transform="translate(10,8) scale(1.0)">
+    <path fill="#FF5630" fill-rule="evenodd" d="M26,16 L72,16 C104,16 104,78 72,78 L112,136 L84,136 L52,86 L52,136 L26,136 Z M52,34 L70,34 C92,34 92,62 62,62 L52,62 Z"/>
+  </g>
+  <text x="150" y="82" font-family="'Archivo','Arial',sans-serif" font-size="58" font-weight="800" letter-spacing="-1" fill="#F4EDE1">Ryan Abir</text>
+  <text x="152" y="120" font-family="'JetBrains Mono','Courier New',monospace" font-size="18" letter-spacing="2" fill="#9A9B94">FULL-STACK  AI · SAAS  ENGINEER</text>
+</svg>
