@@ -1,16 +1,39 @@
 export type SkillGroup = {
   category:
+    | "Languages"
     | "Frontend"
     | "Backend & APIs"
     | "Database & Cloud"
     | "SaaS & Payments"
     | "AI & Product Engineering"
-    | "Tools & Deployment"
-    ;
+    | "Tools & Deployment";
   skills: string[];
+  featured?: boolean;
+  note?: string;
 };
 
 export const skillGroups: SkillGroup[] = [
+  {
+    category: "Languages",
+    featured: true,
+    note: "AI-assisted",
+    skills: [
+      "JavaScript",
+      "TypeScript",
+      "Python",
+      "C",
+      "C++",
+      "Java",
+      "C#",
+      "Go",
+      "Rust",
+      "PHP",
+      "SQL",
+      "HTML",
+      "CSS",
+      "Bash",
+    ],
+  },
   {
     category: "Frontend",
     skills: [
@@ -18,7 +41,6 @@ export const skillGroups: SkillGroup[] = [
       "Next.js",
       "Next.js App Router",
       "TypeScript",
-      "JavaScript",
       "Tailwind CSS",
       "SaaS Dashboard",
       "Responsive UI",
@@ -29,12 +51,13 @@ export const skillGroups: SkillGroup[] = [
     skills: [
       "Node.js",
       "Express.js",
+      "FastAPI",
+      "Django",
       "REST APIs",
       "Next.js API Routes",
       "Server Actions",
-      "Authentication",
+      "Auth & RBAC",
       "AI API Integration",
-      "Full-Stack Product Flow",
     ],
   },
   {
@@ -43,12 +66,12 @@ export const skillGroups: SkillGroup[] = [
       "PostgreSQL",
       "Neon",
       "Prisma",
+      "SQLAlchemy",
       "MongoDB",
+      "Redis",
       "Firebase",
       "Firestore",
-      "Supabase Auth",
-      "Supabase Database",
-      "Application Tracking",
+      "Supabase",
     ],
   },
   {
@@ -65,15 +88,13 @@ export const skillGroups: SkillGroup[] = [
   {
     category: "AI & Product Engineering",
     skills: [
-      "Gemini AI",
+      "LLM APIs",
       "Gemini API",
-      "AI Dashboards",
+      "Agent-Assisted Dev",
       "Structured AI Output",
-      "Prompt Engineering",
-      "SaaS Applications",
+      "Prompt Design",
+      "Business Automation",
       "Clean Architecture",
-      "Technical Assessments",
-      "Product Workflows",
     ],
   },
   {
